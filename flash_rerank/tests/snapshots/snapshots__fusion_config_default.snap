@@ -1,0 +1,7 @@
+---
+source: flash_rerank/tests/snapshots.rs
+expression: "FusionConfig::default()"
+---
+k: 60
+weights:
+  - 1

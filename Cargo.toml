@@ -1,0 +1,36 @@
+[workspace]
+members = [
+    "flash_rerank",
+    "flash-rerank-server",
+    "flash-rerank-cli",
+    "flash-rerank-python",
+    "flash-rerank-wasm",
+    "benchmarks",
+]
+exclude = [
+    "examples/basic_rerank",
+    "examples/two_stage_pipeline",
+    "BM25 Turbo",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.1"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/TheSauceSuite/Flash-Rerank-Rust-Python-WASM-CLI-"
+homepage = "https://github.com/TheSauceSuite/Flash-Rerank-Rust-Python-WASM-CLI-"
+description = "Blazing-fast neural reranking engine — cross-encoder and ColBERT inference with TensorRT, ONNX Runtime, and WASM support"
+keywords = ["reranking", "semantic-search", "cross-encoder", "search", "nlp"]
+categories = ["algorithms", "text-processing", "science"]
+authors = ["The Sauce Suite"]
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1"
+thiserror = "2"

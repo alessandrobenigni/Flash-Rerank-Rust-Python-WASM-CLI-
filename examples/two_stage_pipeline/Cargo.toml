@@ -1,0 +1,9 @@
+[package]
+name = "two_stage_pipeline"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+flash_rerank = { path = "../../flash_rerank" }
+anyhow = "1"

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["maturin>=1.12,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "flash-rerank"
+version = "0.1.1"
+description = "Blazing-fast neural reranking — cross-encoder and ColBERT inference"
+requires-python = ">=3.9"
+license = { text = "MIT OR Apache-2.0" }
+authors = [{ name = "The Sauce Suite" }]
+keywords = ["reranking", "semantic-search", "cross-encoder", "information-retrieval", "nlp"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Indexing",
+]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "flash_rerank"

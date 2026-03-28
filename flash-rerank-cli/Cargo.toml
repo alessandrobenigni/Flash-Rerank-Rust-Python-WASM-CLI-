@@ -1,0 +1,27 @@
+[package]
+name = "flash-rerank-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "CLI for Flash-Rerank — compile, benchmark, serve, and download models"
+authors.workspace = true
+
+[dependencies]
+flash_rerank = { version = "0.1.1", path = "../flash_rerank" }
+flash-rerank-server = { version = "0.1.1", path = "../flash-rerank-server" }
+flash-rerank-benchmarks = { version = "0.1.1", path = "../benchmarks" }
+clap = { version = "4", features = ["derive"] }
+tokio = { workspace = true }
+console = "0.15"
+indicatif = "0.17"
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+clap_complete = "4"
+
+[dev-dependencies]
+assert_cmd = "2"
+predicates = "3"

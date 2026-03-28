@@ -1,0 +1,9 @@
+---
+source: flash_rerank/tests/accuracy_snapshots.rs
+expression: snapshot
+---
+dataset: scifact
+metric: ndcg@10
+model: cross-encoder/ms-marco-MiniLM-L-6-v2
+tolerance: "0.005"
+value: "0.685"

@@ -1,0 +1,9 @@
+---
+source: flash_rerank/tests/accuracy_snapshots.rs
+expression: snapshot
+---
+dataset: msmarco-small
+metric: mrr
+model: cross-encoder/ms-marco-MiniLM-L-6-v2
+tolerance: "0.005"
+value: "0.853"

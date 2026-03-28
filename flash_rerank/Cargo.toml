@@ -1,0 +1,51 @@
+[package]
+name = "flash_rerank"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Core reranking engine — cross-encoder and ColBERT inference via ONNX Runtime"
+keywords.workspace = true
+categories.workspace = true
+authors.workspace = true
+
+[dependencies]
+ort = { version = "2.0.0-rc.12" }
+tokenizers = { version = "0.21", default-features = false, features = ["fancy-regex"] }
+memmap2 = "0.9"
+hf-hub = { version = "0.4", features = ["tokio"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+indicatif = "0.17"
+lru = "0.12"
+
+[[example]]
+name = "profile_pipeline"
+
+[[example]]
+name = "micro_profile"
+
+[[example]]
+name = "gpu_check"
+
+[[example]]
+name = "pipeline_benchmark"
+
+[[example]]
+name = "gpu_bench_models"
+
+[features]
+default = []
+cuda = []
+tensorrt = []
+
+[dev-dependencies]
+insta = { version = "1", features = ["yaml"] }
+proptest = "1"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+dirs = "6"

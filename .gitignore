@@ -1,0 +1,57 @@
+# Secrets
+.env
+
+# Rust build artifacts
+**/target/
+
+# Build artifacts
+*.so
+*.dylib
+*.dll
+*.pdb
+
+# ONNX / TensorRT engines (downloaded at runtime, not shipped)
+*.onnx
+*.trt
+*.plan
+*.engine
+engines/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+.venv/
+venv/
+
+# WASM
+pkg/
+*.wasm
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models (large files, downloaded at runtime)
+models/
+*.bin
+*.safetensors
+
+# Development metadata (not shipped)
+.nova/
+.claude/
+CLAUDE.md
+BM25 Turbo/
+
+# Generated benchmark results (reproducible via cargo bench)
+benchmarks/results/
+reports/

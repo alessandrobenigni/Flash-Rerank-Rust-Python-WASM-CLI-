@@ -1,0 +1,15 @@
+# RPATH configuration for static binary distribution.
+# Allows the flash-rerank binary to find bundled shared libraries (e.g. ONNX Runtime,
+# CUDA runtime) in a relative lib/ directory next to the binary.
+
+[target.x86_64-unknown-linux-gnu]
+rustflags = ["-C", "link-arg=-Wl,-rpath,$ORIGIN/lib"]
+
+[target.aarch64-unknown-linux-gnu]
+rustflags = ["-C", "link-arg=-Wl,-rpath,$ORIGIN/lib"]
+
+[target.x86_64-apple-darwin]
+rustflags = ["-C", "link-arg=-Wl,-rpath,@executable_path/lib"]
+
+[target.aarch64-apple-darwin]
+rustflags = ["-C", "link-arg=-Wl,-rpath,@executable_path/lib"]

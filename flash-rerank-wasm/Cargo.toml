@@ -1,0 +1,22 @@
+[package]
+name = "flash-rerank-wasm"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "WASM module for Flash-Rerank — browser and edge inference via tract"
+authors.workspace = true
+
+[dependencies]
+tract-onnx = "0.21"
+tokenizers = { version = "0.21", default-features = false, features = ["fancy-regex"] }
+wasm-bindgen = "0.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde-wasm-bindgen = "0.6"
+getrandom = { version = "0.2", features = ["js"] }
+getrandom_03 = { package = "getrandom", version = "0.3", features = ["wasm_js"] }
+
+[lib]
+crate-type = ["cdylib"]

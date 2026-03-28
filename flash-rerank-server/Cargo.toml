@@ -1,0 +1,38 @@
+[package]
+name = "flash-rerank-server"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "HTTP server for Flash-Rerank inference"
+authors.workspace = true
+
+[[bin]]
+name = "flash-rerank-server"
+path = "src/main.rs"
+
+[lib]
+name = "flash_rerank_server"
+path = "src/lib.rs"
+
+[dependencies]
+flash_rerank = { version = "0.1.1", path = "../flash_rerank" }
+axum = { version = "0.8", features = ["json"] }
+tokio = { workspace = true }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "compression-gzip", "trace"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["json"] }
+anyhow = { workspace = true }
+clap = { version = "4", features = ["derive"] }
+opentelemetry = { version = "0.27", optional = true }
+opentelemetry-otlp = { version = "0.27", features = ["tonic"], optional = true }
+opentelemetry_sdk = { version = "0.27", features = ["rt-tokio"], optional = true }
+tracing-opentelemetry = { version = "0.28", optional = true }
+
+[features]
+default = []
+telemetry = ["opentelemetry", "opentelemetry-otlp", "opentelemetry_sdk", "tracing-opentelemetry"]

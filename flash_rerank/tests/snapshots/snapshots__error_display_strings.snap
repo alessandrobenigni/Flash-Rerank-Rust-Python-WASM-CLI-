@@ -1,0 +1,11 @@
+---
+source: flash_rerank/tests/snapshots.rs
+expression: error_map
+---
+cache: "cache error: test cache error"
+calibration: "calibration error: test calibration error"
+config: "config error: test config error"
+download: "download error: test download error"
+inference: "inference error: test inference error"
+model: "model error: test model error"
+tokenizer: "tokenizer error: test tokenizer error"

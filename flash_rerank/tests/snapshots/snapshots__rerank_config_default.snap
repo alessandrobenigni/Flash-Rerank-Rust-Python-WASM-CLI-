@@ -1,0 +1,7 @@
+---
+source: flash_rerank/tests/snapshots.rs
+expression: "RerankConfig::default()"
+---
+batch_size: 64
+max_length: 512
+normalize_scores: true

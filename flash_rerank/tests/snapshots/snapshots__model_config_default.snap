@@ -1,0 +1,9 @@
+---
+source: flash_rerank/tests/snapshots.rs
+expression: "ModelConfig::default()"
+---
+model_id: cross-encoder/ms-marco-MiniLM-L-6-v2
+precision: FP32
+device: Cpu
+scorer_type: CrossEncoder
+max_length: 128
