@@ -42,7 +42,7 @@ pkg/
 Thumbs.db
 
 # Models (large files, downloaded at runtime)
-models/
+/models/
 *.bin
 *.safetensors
 
