@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/TheSauceSuite/Flash-Rerank-Rust-Python-WASM-CLI-/actions"><img src="https://img.shields.io/github/actions/workflow/status/TheSauceSuite/Flash-Rerank-Rust-Python-WASM-CLI-/ci.yml?label=CI" alt="CI"></a>
-  <a href="LICENSE-MIT"><img src="https://img.shields.io/badge/license-MIT%2FApache--2.0-blue" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-blue" alt="License"></a>
   <a href="https://crates.io/crates/flash_rerank"><img src="https://img.shields.io/crates/v/flash_rerank" alt="crates.io"></a>
   <a href="https://pypi.org/project/flash-rerank/"><img src="https://img.shields.io/pypi/v/flash-rerank" alt="PyPI"></a>
   <a href="https://www.npmjs.com/package/flash-rerank-wasm"><img src="https://img.shields.io/npm/v/flash-rerank-wasm" alt="npm"></a>
@@ -546,12 +546,12 @@ cd flash-rerank-wasm && wasm-pack build --target web
 
 ## License
 
-Licensed under either of:
+**v0.2.0+** is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](LICENSE).
 
-- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE))
-- MIT License ([LICENSE-MIT](LICENSE-MIT))
+- **Individuals and open-source projects**: Free to use under AGPL-3.0 terms.
+- **Enterprises and commercial use**: A commercial license is available at **[alessandrobenigni.com](https://alessandrobenigni.com)** — use Flash-Rerank in proprietary software without the AGPL copyleft requirement. See [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md) for details.
 
-at your option.
+> **Legacy**: v0.1.x was released under MIT/Apache-2.0. Those versions remain under their original terms but are no longer maintained.
 
 ---
 

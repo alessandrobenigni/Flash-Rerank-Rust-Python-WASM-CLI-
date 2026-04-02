@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.2.0] - 2026-03-28
+
+### Changed
+- License changed from MIT/Apache-2.0 to AGPL-3.0-or-later
+- Commercial license available at https://alessandrobenigni.com for enterprise/proprietary use
+- See COMMERCIAL_LICENSE.md for details
+
+### Fixed
+- All clippy lints resolved for clean CI
+- models/ gitignore pattern no longer excludes source code modules
+- CUDA/TensorRT features now optional (CPU builds work without NVIDIA SDK)
+- Python arerank() uses get_running_loop() instead of deprecated get_event_loop()
+- Server `--model` flag now accepts HuggingFace model IDs (not just filesystem paths)
+
+## [0.1.1] - 2026-03-28
+
+### Fixed
+- Clippy lint fixes
+- models/mod.rs missing from git (overly broad gitignore)
+
 ## [0.1.0] - 2026-03-28
 
 ### Added

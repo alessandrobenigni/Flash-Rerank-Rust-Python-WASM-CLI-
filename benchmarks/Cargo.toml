@@ -9,7 +9,7 @@ description = "Benchmark suite for Flash-Rerank"
 authors.workspace = true
 
 [dependencies]
-flash_rerank = { version = "0.1.1", path = "../flash_rerank" }
+flash_rerank = { version = "0.2.0", path = "../flash_rerank" }
 tokio = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }

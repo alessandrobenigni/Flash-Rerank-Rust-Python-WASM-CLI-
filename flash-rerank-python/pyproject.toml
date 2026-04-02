@@ -4,10 +4,10 @@ build-backend = "maturin"
 
 [project]
 name = "flash-rerank"
-version = "0.1.1"
+version = "0.2.0"
 description = "Blazing-fast neural reranking — cross-encoder and ColBERT inference"
 requires-python = ">=3.9"
-license = { text = "MIT OR Apache-2.0" }
+license = { text = "AGPL-3.0-or-later" }
 authors = [{ name = "The Sauce Suite" }]
 keywords = ["reranking", "semantic-search", "cross-encoder", "information-retrieval", "nlp"]
 classifiers = [

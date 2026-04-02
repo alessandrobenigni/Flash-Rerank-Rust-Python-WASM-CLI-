@@ -9,9 +9,9 @@ description = "CLI for Flash-Rerank — compile, benchmark, serve, and download 
 authors.workspace = true
 
 [dependencies]
-flash_rerank = { version = "0.1.1", path = "../flash_rerank" }
-flash-rerank-server = { version = "0.1.1", path = "../flash-rerank-server" }
-flash-rerank-benchmarks = { version = "0.1.1", path = "../benchmarks" }
+flash_rerank = { version = "0.2.0", path = "../flash_rerank" }
+flash-rerank-server = { version = "0.2.0", path = "../flash-rerank-server" }
+flash-rerank-benchmarks = { version = "0.2.0", path = "../benchmarks" }
 clap = { version = "4", features = ["derive"] }
 tokio = { workspace = true }
 console = "0.15"
