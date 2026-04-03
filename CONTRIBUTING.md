@@ -66,9 +66,15 @@ wasm-pack build --target web
 
 1. **Push** your branch to your fork.
 2. Open a **Pull Request** against the `main` branch.
-3. **Sign the CLA** — A bot will comment on your PR asking you to sign the [Contributor License Agreement](CLA.md). Comment with the exact phrase: `I have read the CLA Document and I hereby sign the CLA`. The PR cannot be merged until the CLA is signed.
-4. Describe your changes and link any related issues.
-5. Ensure CI passes on your PR.
+3. **Sign off your commits (DCO)** — Every commit must include a `Signed-off-by` line certifying you wrote the code and have the right to submit it. Use `git commit -s` to add it automatically:
+   ```bash
+   git commit -s -m "Add feature X"
+   # Produces: Signed-off-by: Your Name <your@email.com>
+   ```
+   The DCO bot will block your PR if any commit is missing the sign-off.
+4. **Sign the CLA** — A bot will comment on your PR asking you to sign the [Contributor License Agreement](CLA.md). Comment with the exact phrase: `I have read the CLA Document and I hereby sign the CLA`. The PR cannot be merged until the CLA is signed.
+5. Describe your changes and link any related issues.
+6. Ensure CI passes on your PR.
 
 ## Reporting Issues
 
@@ -80,6 +86,16 @@ wasm-pack build --target web
 All contributors must sign the [CLA](CLA.md) before their first Pull Request can be merged. This is required because Flash-Rerank uses a dual-licensing model (AGPL-3.0 for open-source, commercial license for enterprises). The CLA grants the maintainer the right to include your contributions under both licenses.
 
 The signing process is fully automated via a GitHub bot — just comment on your PR and you're done.
+
+## Developer Certificate of Origin (DCO)
+
+All commits must be signed off with `git commit -s`, certifying that you wrote the code and have the right to submit it under the project's license. This is the [Developer Certificate of Origin](https://developercertificate.org/). The DCO bot automatically checks every commit in your PR.
+
+If you forgot to sign off, you can amend your last commit:
+```bash
+git commit --amend -s --no-edit
+git push --force-with-lease
+```
 
 ## License
 
